@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ResumeClient
+build_property.RootNamespace = ResumeClient
+build_property.ProjectDir = D:\Codes\___ExamWeb\ResumeClient\ResumeClient\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Codes\___ExamWeb\ResumeClient\ResumeClient
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/GetStarted/GetStarted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2V0U3RhcnRlZFxHZXRTdGFydGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/GetStarted/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2V0U3RhcnRlZFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/GetStarted/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2V0U3RhcnRlZFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/AddAdditionSkill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEFkZEFkZGl0aW9uU2tpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/AddMainSkill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEFkZE1haW5Ta2lsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/AddProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEFkZFByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/AddSection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEFkZFNlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Resume/Resume.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdW1lXFJlc3VtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Codes/___ExamWeb/ResumeClient/ResumeClient/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jfu1oqtvgm

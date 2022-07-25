@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ResumeClient.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var user in Model)
+{
+    <div class="conteiner">
+        <div class="row align-items-center mt-1 userList_row mb-1">
+            <div class="col-1 text-center">
+                @{
+                    if (user.BaseImage == null)
+                    {
+                        <img class="userList_image img-fluid" src="~/images/noImage.jpg" alt="Avatar">
+                    }
+                    else
+                    {
+                        string img = String.Format("data:image/jpg;base64,{0}", user.BaseImage);
+                        <img class="userList_image img-fluid" src="@img" alt="Avatar">
+                    }
+                }
+                
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h5>Name:  @user.Name</h5>
+                <h5>Surname:  @user.SurName</h5>
+            </div>
+            <div class="col-1">
+                <label class="mt-3 mb-2">Hard skills: </label>
+                <label class="mt-2 mb-3">Soft skills: </label>
+            </div>
+            <div class="col-5">
+                <div class="skillBox mt-3 mb-3">
+                    @foreach (var skill in user?.MainSkills)
+                    {
+                        <div style="background:@skill.BackgroundColor;color:@skill.Color" class="userList_skill">@skill.Name</div>
+                    }
+                </div>
+
+                <div class="skillBox mt-3 mb-3">
+                    @foreach (var skill in user?.AdditionSkills)
+                    {
+                        <div style="background:@skill.BackgroundColor;color:@skill.Color" class="userList_skill">@skill.Name</div>
+                    }  
+                </div>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-info">
+                    <a class="userList_link" asp-controller="Resume" asp-action="Resume" asp-route-id="@user.Id">View</a>
+                </button>
+                <!--
+                    <button class="btn btn-warning">
+                        <a class="userList_link" asp-controller="Message" asp-action="Message" asp-route-id="@user.Id">Message</a>
+                    </button>
+                -->            
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,124 @@
+﻿@model ResumeClient.Models.User
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    //Get object from session
+    var currentUserId = HttpContextAccessor.HttpContext.Session.GetString("CurrentUserId") ?? "";
+ }
+
+
+<div class="conteiner">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="resumePage_info pb-3 pt-1">
+                    <h2 class="text-center">Profile</h2>
+                    @if (Model.Id.ToString() == currentUserId)
+                    {
+                        <button class="btn btn-warning toEditPage_btn">
+                            <a class="userList_link" asp-controller="Resume" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                        </button>
+                    }                                    
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            @if (Model.BaseImage == null)
+                            {
+                                <img class="resumePage_image img-fluid" src="~/images/noImage.jpg" alt="Avatar">
+                            }
+                            else
+                            {
+                                string img = String.Format("data:image/jpg;base64,{0}", Model.BaseImage);
+                                <img class="resumePage_image img-fluid" src="@img" alt="Avatar">
+                            }
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3 mt-3">
+                                 @{var fullName = $"{Model.Name} {Model.SurName}";}
+                                <h3 class="text-center">@fullName</h3>
+                                <ul class="resumePage_links">
+                                    <li>
+                                        <a href="@Model.Instagram" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Model.Telegram" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa-brands fa-telegram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Model.GitHub" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <label class="mt-3 mb-3">Hard skills: </label>
+                            <label class="mt-2 mb-3">Soft skills: </label>
+                        </div>
+                        <div class="col-4">
+                            <div class="skillBox mt-3 mb-3">
+                                @foreach (var skill in Model?.MainSkills)
+                                {
+                                    <div style="background:@skill.BackgroundColor;color:@skill.Color" class="userList_skill">@skill.Name</div>
+                                }
+                            </div>
+                        
+                            <div class="skillBox mt-3 mb-3">
+                                @foreach (var skill in Model?.AdditionSkills)
+                                {
+                                    <div style="background:@skill.BackgroundColor;color:@skill.Color" class="userList_skill">@skill.Name</div>
+                                }  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resumePage_about pb-5 pt-1">
+                    <h2 class="text-center">About</h2>
+                    @foreach (var sec in Model?.Sections)
+                    {
+                        <div style="background:@sec.BackgroundColor;color:@sec.Color" class="resumePage_aboutItem">
+                            <h4>@sec.Title</h4>
+                            <p>@sec.Text</p>
+                        </div>
+                    }                   
+                </div>
+                <div class="resumePage_projects pb-5 pt-1 mb-5">
+                    <h2 class="text-center">Projects</h2>
+                    <!--
+                        <ul class="resumePage_area">
+                            foreach (var area in Model?.Areas)
+                            {
+                                <li><a href="#">area.Name</a></li>
+                            }                  
+                        </ul>
+                    -->
+                    <div class="resumePage_areaContent">
+                        @foreach (var project in @Model?.Projects)
+                        {
+                            <div class="text-center projectBox mb-5">
+                                <h4 class="text-center mb-3 mt-3">@project.Title</h4>
+                                 @if (project.BaseImage == null)
+                                 {
+                                     <img class="img-fluid resumePage_areaImage" src="~/images/noImage.jpg" alt="Avatar">
+                                 }
+                                 else
+                                 {
+                                     string img = String.Format("data:image/jpg;base64,{0}", project.BaseImage);
+                                     <img class="img-fluid resumePage_areaImage" src="@img" alt="Avatar">
+                                 }              
+                                <p class="text-center mb-3 mt-3">@project.Info</p>
+                                <a href="@project.Link" target="_blank" rel="noopener noreferrer">Link</a>
+                            </div>         
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

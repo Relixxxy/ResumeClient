@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "View";
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--Font Styles-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Kanit:wght@300&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <!--
+        font-family: 'Fascinate', cursive;
+        font-family: 'Kanit', sans-serif;
+        font-family: 'Titan One', cursive;
+    -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+
+    <title>GetStarted</title>
+</head>
+<body style="overflow: hidden">
+    <div class="body_getStarted" >
+        <h1 class="title_getStarter">Relixxxy's site</h1>
+        <div class="trianglesLeft_getStarter"></div>
+        <div class="trianglesRight_getStarter"></div>
+        <button class="btn_getStarted open-popup">Get Started</button>
+    </div>  
+
+
+
+<div class="popup-bg">
+    <div class="col-4 text-dark log-reg-form popup-form">
+        <div class="pt-3 regView fullWidth">
+            @Html.Partial("Register", new RegistrationViewModel())
+        </div>
+        
+        <div class="logView fullWidth">
+            @Html.Partial("Login", new LoginViewModel())
+        </div>        
+    </div>
+</div>
+
+
+<script>
+	$(function() {
+        $('.regView').fadeOut();
+        $('.logView').fadeIn();
+
+        $('.btn_showLogin').click(function(e) {
+			$('.regView').fadeOut();
+            $('.logView').fadeIn();
+		});
+
+        $('.btn_showRegister').click(function(e) {
+			$('.regView').fadeIn();
+            $('.logView').fadeOut();
+		});
+
+		$('.open-popup').click(function(e) {
+			e.preventDefault()
+            $('.popup-bg').fadeIn(600);
+		});
+		$('.close-popup').click(function() {
+			$('.popup-bg').fadeOut(600);
+		});
+	});
+	
+</script>
+</body>
+</html>

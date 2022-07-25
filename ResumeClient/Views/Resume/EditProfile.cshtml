@@ -1,0 +1,59 @@
+﻿@model ResumeClient.Models.User
+
+<form asp-controller="Resume" asp-action="EditProfile" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <h3 class="text-center mt-3">Edit profile </h3>
+    <div class="row">
+        <div class="col-3">
+            <div class='form-group'>
+                <label class="control-label" for="profileImage">Enter Image</label>
+                <label id="add_img_lbl">
+                    <input class="form-control" id="add_img_inp" type="file" name="profileImage">
+                    <div id="add_img_square"></div>
+                </label>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurName" class="control-label">SurName</label>
+                <input asp-for="SurName" class="form-control" />
+                <span asp-validation-for="SurName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label">Age</label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Instagram" class="control-label"></label>
+        <input asp-for="Instagram" class="form-control" />
+        <span asp-validation-for="Instagram" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Telegram" class="control-label"></label>
+        <input asp-for="Telegram" class="form-control" />
+        <span asp-validation-for="Telegram" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GitHub" class="control-label"></label>
+        <input asp-for="GitHub" class="form-control" />
+        <span asp-validation-for="GitHub" class="text-danger"></span>
+    </div>                   
+
+    <div class="form-group form-buttons mt-3">
+        <input type="submit" value="Save Changes" name="EditUser" class="btn log-reg-btn" />
+        <input type="button" value="Exit" class="btn exit-btn close-popup" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

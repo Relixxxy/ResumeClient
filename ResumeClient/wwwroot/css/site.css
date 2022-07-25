@@ -1,0 +1,462 @@
+@import url('site.css');
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+* {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 18px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.layout {
+    display: none;
+}
+
+.body_getStarted {
+    background-image: url("../images/getStarted_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    --triangles_getStarter-time: 2s;
+    --title_getStarter-time: 4s;
+}
+
+/* Get Started Page START*/
+.btn_getStarted {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 100px;
+    background-color: rgb(167, 79, 226);
+    color: white;
+    border: 3px solid rgb(85, 0, 85);
+    border-radius: 30%; 
+}
+
+    .btn_getStarted {
+        text-decoration: none !important;
+        color: white !important;
+        cursor: pointer;
+        font-size: 30px !important;
+        font-family: 'Titan One', cursive !important;
+    }
+
+
+
+.trianglesLeft_getStarter {
+    position: absolute;
+    top: 30%;
+    bottom: 5%;
+    background-image: url("../images/getStarted_triangles.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 90%;
+    animation-name: trianglesLeft_getStarter-load;
+    animation-duration: var(--triangles_getStarter-time);
+}
+
+.trianglesRight_getStarter {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 0;
+    background-image: url("../images/getStarted_triangles.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 90%;
+    animation-name: trianglesRight_getStarter-load;
+    animation-duration: var(--triangles_getStarter-time);
+}
+
+.title_getStarter {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    color: aliceblue;
+    font-size: 40px;
+    font-family: 'Fascinate', cursive;
+    transform: translateX(-50%);
+    animation-name: title_getStarter-load;
+    animation-duration: var(--title_getStarter-time);
+  
+}
+
+@keyframes trianglesLeft_getStarter-load {
+    0% {
+        transform: translate(-150%, -150%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes trianglesRight_getStarter-load {
+    0% {
+        transform: translate(300%, 300%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes title_getStarter-load {
+    0% {
+        transform: translate(-50%, -400%);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+/*Asp.neT part START*/
+.GetStarterPageLayout {
+}
+/*Asp.neT part END */
+/* Get Started Page END */
+/* Users List Page START */
+.userList_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.userList_skill {
+    position:relative;
+    border-radius: 30%;
+    padding: 3px;
+    margin: 0 7px;
+}
+
+.userList_row {
+    border: 1px solid black;
+}
+
+.userList_link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Users List Page END */
+
+/* User Page START */
+.resumePage_info {
+    position: relative;
+    background-color: rgb(177, 217, 252);
+}
+
+.resumePage_about {
+    position: relative;
+    background-color: rgb(177, 200, 249);
+}
+
+.resumePage_projects {
+    position: relative;
+    background-color: rgb(208, 178, 247);
+}
+
+.resumePage_image {
+    border-radius: 10%;
+    width: 170px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.resumePage_links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-top: 10%;
+}
+.resumePage_links li a {
+    text-decoration: none;
+    color: inherit;
+}
+    .resumePage_links li a i {
+        font-size: 30px;
+    }
+
+.resumePage_aboutItem {
+    position:relative;
+    margin: 0 20px;
+    border-radius: 5%;
+    border: 3px solid grey;
+    margin: 8px;
+    padding: 8px 15px;
+}
+
+.resumePage_areaImage {
+    width: 200px;
+    border-radius: 5%;
+}
+
+.resumePage_area {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+    .resumePage_area li {
+        background-color: rgb(160, 43, 138);
+        color: wheat;
+        padding: 5px;
+        border-radius: 20%;
+    }
+
+        .resumePage_area li a {
+            text-decoration: none;
+            color: inherit;
+        }
+.resumePage_areaContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    .resumePage_areaContent div p {
+        overflow-x: hidden;
+        padding: 0 5px;
+    }
+
+.resumePage_areaContent a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.projectBox {
+    position: relative;
+    width: 30%;
+    border-radius: 5%;
+    border: 1px solid violet;
+    background-color: rgb(198, 160, 247);
+}
+
+/* User Page END */
+
+/*log-reg-popup START*/
+.fullWidth {
+    width: 100%;
+    margin-left: 8%;
+}
+
+textarea {
+    height: 40%;
+    resize: none;
+}
+
+
+
+.reg-bg {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.log-reg-form {
+    background-color: aliceblue;
+    border: 3px solid grey;
+    border-radius: 5%;
+}
+
+    .log-reg-form h3 {
+        color: black;
+    }
+
+    .log-reg-form form {
+        width: 90%;
+    }
+
+.popup-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+
+.popup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.exit-btn {
+    background: orange;
+}
+
+    .exit-btn:hover {
+        background: red;
+        color: white;
+    }
+
+
+.log-reg-btn {
+    background: rgb(0, 225, 255);
+}
+
+    .log-reg-btn:hover {
+        background: rgb(85, 0, 124);
+        color: white;
+    }
+/*log-reg-popup END*/
+
+/*Edit START*/
+
+.toEditPage_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto;
+}
+
+.editProfile_btn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.addMainSkill_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.addAdditionSkill_btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.addSection_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+.addProject_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.skillBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.deleteIcon {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 10px;
+    color: red;
+
+}
+
+
+#add_img_lbl {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/noImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+}
+
+#add_img_inp {
+    display: none;
+}
+#add_img_square {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/addImage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+
+#add_img_lbl:hover > div {
+    display: block;
+}
+
+#add_img_lbl_project {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/noImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+}
+
+#add_img_inp_project {
+    display: none;
+}
+
+#add_img_square_project {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/addImage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+
+#add_img_lbl_project:hover > div {
+    display: block;
+}
+
+
+/*Edit END*/

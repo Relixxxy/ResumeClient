@@ -1,0 +1,40 @@
+﻿@model ResumeClient.Models.Section
+
+<div class="row mt-3">
+    <h4 class="text-center mt-3">Section</h4>
+    <form asp-action="AddSection">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Title" class="control-label"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Text" class="control-label"></label>
+            <textarea class="form-control" asp-for="Text" ></textarea>
+            <span asp-validation-for="Text" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BackgroundColor" class="control-label"></label>
+            <input asp-for="BackgroundColor" type="color" class="form-control" value="#FFFFFF" />
+            <span asp-validation-for="BackgroundColor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Color" class="control-label"></label>
+            <input asp-for="Color" type="color" class="form-control" />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input hidden asp-for="UserId" class="form-control" value="@Model.UserId"/>
+        </div>
+
+        <div class="form-group mt-3 mb-3 form-buttons">           
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <input type="button" value="Exit" class="btn exit-btn close-popup" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
