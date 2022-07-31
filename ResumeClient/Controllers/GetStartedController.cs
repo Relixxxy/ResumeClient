@@ -22,14 +22,22 @@ namespace ResumeClient.Controllers
         {
             Credentials cred = null;
 
-            using (var client = new HttpClient())
+            try
             {
-                using (var response = await client.GetAsync($"https://localhost:7188/api/credentials/{data.Login}/{data.Password}"))
+                using (var client = new HttpClient())
                 {
-                    var content = await response.Content.ReadAsStringAsync();
-                    cred = JsonConvert.DeserializeObject<Credentials>(content);
+                    using (var response = await client.GetAsync($"https://localhost:7188/api/credentials/{data.Login}/{data.Password}"))
+                    {
+                        var content = await response.Content.ReadAsStringAsync();
+                        cred = JsonConvert.DeserializeObject<Credentials>(content);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                return RedirectToAction("GetStarted");
+            }
+            
 
             if (cred.Id == 0)
             {
